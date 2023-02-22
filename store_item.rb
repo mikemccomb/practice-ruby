@@ -20,34 +20,16 @@
 
 class Store
   attr_accessor :color, :size, :price, :in_stock
-  # attr_reader :color, :size, :price, :in_stock
-  # attr_writer :price
 
-  def initialize(color, size, price, in_stock)
-    @color = color
-    @size = size
-    @price = price
-    @in_stock = in_stock
+  def initialize(inventory)
+    @color = inventory[:color]
+    @size = inventory[:size]
+    @price = inventory[:price]
+    @in_stock = inventory[:in_stock]
   end
-
-  # def color
-  #   @color
-  # end
-
-  # def size
-  #   @size
-  # end
-
-  # def price
-  #   @price
-  # end
-
-  # def price=(new_price)
-  #   @price = new_price
-  # end
 end
 
-shoes = Store.new("red", "large", 39.99, false)
+shoes = Store.new(color: "red", size: "large", price: 39.99, in_stock: false)
 #hats = Store.new("blue", "small", 9.99, true)
 #gloves = Store.new("black", "medium", 12.99, true)
 
