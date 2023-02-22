@@ -19,8 +19,9 @@
 # Classy Syntax
 
 class Store
-  attr_reader :color, :size, :price, :in_stock
-  attr_writer :price
+  attr_accessor :color, :size, :price, :in_stock
+  # attr_reader :color, :size, :price, :in_stock
+  # attr_writer :price
 
   def initialize(color, size, price, in_stock)
     @color = color
