@@ -17,6 +17,9 @@
 #puts "The #{gloves[:size]} #{gloves[:color]} shoes cost $#{gloves[:price]}."
 
 class Store
+  attr_reader :color, :size, :price, :in_stock
+  attr_writer :price
+
   def initialize(color, size, price, in_stock)
     @color = color
     @size = size
@@ -24,21 +27,21 @@ class Store
     @in_stock = in_stock
   end
 
-  def color
-    @color
-  end
+  # def color
+  #   @color
+  # end
 
-  def size
-    @size
-  end
+  # def size
+  #   @size
+  # end
 
-  def price
-    @price
-  end
+  # def price
+  #   @price
+  # end
 
-  def price=(new_price)
-    @price = new_price
-  end
+  # def price=(new_price)
+  #   @price = new_price
+  # end
 end
 
 shoes = Store.new("red", "large", 39.99, false)
