@@ -30,8 +30,8 @@ class Store
 end
 
 shoes = Store.new(color: "red", size: "large", price: 39.99, in_stock: false)
-#hats = Store.new("blue", "small", 9.99, true)
-#gloves = Store.new("black", "medium", 12.99, true)
+# hats = Store.new("blue", "small", 9.99, true)
+# gloves = Store.new("black", "medium", 12.99, true)
 
 p shoes.price
 p shoes.size
