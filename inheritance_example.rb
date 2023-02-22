@@ -1,6 +1,4 @@
 class Vehicle
-  attr_accessor :speed
-
   def initialize
     @speed = 0
     @direction = "north"
@@ -34,12 +32,10 @@ end
 car = Car.new
 bike = Bike.new
 
-p car.speed
 car.accelerate
-p car.speed
+p car
 car.honk_horn
 
-p bike.speed
 bike.accelerate
-p bike.speed
+p bike
 bike.ring_bell
