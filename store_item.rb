@@ -29,12 +29,22 @@ class Store
   end
 end
 
+class Food < Store
+  def initialize(inventory)
+    super
+    @shelf_life = inventory[:shelf_life]
+  end
+end
+
 shoes = Store.new(color: "red", size: "large", price: 39.99, in_stock: false)
 # hats = Store.new("blue", "small", 9.99, true)
 # gloves = Store.new("black", "medium", 12.99, true)
+hamburger = Food.new(color: "red", size: "medium", price: 4.99, in_stock: true, shelf_life: "1 week")
 
 p shoes.price
 p shoes.size
 p shoes.color
 shoes.price = 59.99
 p shoes.price
+
+p hamburger
