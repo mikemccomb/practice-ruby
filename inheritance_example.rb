@@ -1,4 +1,6 @@
 class Car
+  attr_accessor :speed
+
   def initialize
     @speed = 0
     @direction = "north"
@@ -26,3 +28,16 @@ class Bike < Car
     puts "Ring ring!"
   end
 end
+
+car = Car.new
+bike = Bike.new
+
+p car.speed
+car.accelerate
+p car.speed
+car.honk_horn
+
+p bike.speed
+bike.accelerate
+p bike.speed
+bike.ring_bell
