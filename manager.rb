@@ -34,8 +34,19 @@ class Manager < Employee
     # use email sending library...
     puts "Email sent!"
   end
+
+  def give_all_raises
+    @employees.each do |employee|
+      employee.give_annual_raise
+    end
+  end
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
 manager.print_info
 manager.send_report
+employee1.print_info
+employee2.print_info
+manager.give_all_raises
+employee1.print_info
+employee2.print_info
